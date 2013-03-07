@@ -1,0 +1,137 @@
+%\documentclass{beamer}
+\documentclass[14pt,handout]{beamer}
+\usetheme{Darmstadt}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setbeamertemplate{footline}[frame number]
+
+\usepackage{pdfcomment}
+\newcommand{\ben}[1]{\pdfcomment[author=Ben]{#1}}
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+
+\title{Umgang mit Sozialen Netzwerken}
+\author{Chaos Computer Club Dresden\\Marius Melzer, Paul Schwanse, Stephan Thamm}
+\date{Stand: 22. März 2012}
+
+\begin{document}
+\maketitle
+
+\frame{\tableofcontents[hideallsubsections]}
+
+\section{Einleitung}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Motivation}
+    \begin{itemize}
+        \item<2-> immer tiefere Integration von Computern in das Leben der Menschen
+            \note{Hörgeräte, Herzschrittmacher, Digitale Lebensaufzeichnungen, Bundestrojaner -> FAZ Feuilleton}
+        \item<3-> Lücke im Bildungssystem
+        \item<4-> sehen uns in der Pflicht Wissen zu vermitteln
+        \item<5-> Verständnis anstatt Anleitungen
+        \item<6-> Vernetzung mit Schulen und anderen Bildungseinrichtungen
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wer sind wir?}
+    \begin{itemize}
+        \item<2-> Chaos Computer Club Dresden (\url{http://c3d2.de})
+            \note{}
+        \item<3-> Datenspuren (\url{http://datenspuren.de})
+        \item<4-> Podcasts (\url{http://pentamedia.de})
+        \item<5-> Chaos macht Schule
+            \begin{itemize}
+                \item \url{http://ccc.de/schule}
+                \item \url{http://c3d2.de/schule.html}
+            \end{itemize}
+            \note{alle Folien auf einmal aufblättern? Ben's vorschlag}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chaos macht Schule}
+    \begin{itemize}
+        \item<2->Ziele:
+            \begin{itemize}
+                \item<3-> Kinder auf das Internet vorbereiten \ldots
+                \item<4-> \ldots nicht das Internet auf Kinder
+                    \note{Scheren-Vergleich}
+                \item<5-> Informationelle Selbstbestimmung
+                \item<6-> Medienkompetenz
+                    \note{Medium nicht nur benutzen, sondern auch verstehen. Wir machen keinen Datenschutz-Richtlinien bei Facebook klicken Vortrag!}
+                \item<7-> Kreativer Umgang mit Technik
+                    \note{Eigene Dinge schaffen, weg von der Konsum-Mentalität}
+            \end{itemize}
+        \item<8-> Schulklassen
+        \item<9-> Elternabende
+        \item<10-> Lehrerfortbildung
+    \end{itemize}
+\end{frame}
+
+\section{Freiheit}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Was wir vermitteln wollen}
+    \begin{itemize}
+        \item<2-> Dezentrale Dienste
+            \note{man kann sich die Organisation aussuchen die seine Daten bekommt bzw. einen eigenen Server betreiben}
+            \begin{itemize}
+                \item<3-> Email
+                \item<4-> Jabber/XMPP
+                \item<5-> Diaspora, Buddycloud
+            \end{itemize}
+        \item<6-> Alle Sender gleichberechtigt
+        \item<7-> Unix-Philosophie von Doug McIlroy:
+            \begin{quote}Do one thing, do it right!
+            \end{quote}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Freie Lizenzen}
+    \begin{itemize}
+        \item<2-> Jeder ist Produzent und Konsument
+        \item<3-> Urheberrecht schränkt Verwendung ein
+        \item<4-> Freie Lizenzen ermöglichen Verbreitung
+%      \ben{an dieser Stelle vielleicht CopyLeft als Buzzword erwähnen (daran erinnern sich dann vielleicht die Leute)}
+        \item<5-> Sharing is caring
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Freie Medien}
+    \begin{itemize}
+        \item<2-> Freie Lehrmaterialien
+        \item<3-> Freie Musik
+            \begin{itemize}
+                \item Jamendo (\url{http://www.jamendo.com/})
+                \item Free Music Archive (\url{http://freemusicarchive.org/})
+                \item Pentamusic (\url{http://pentamedia.org/})
+            \end{itemize}
+        \item<4-> Open Clip Art Library (\url{http://openclipart.org/})
+        \item<5-> OpenStreetMap (\url{http://openstreetmap.de/})
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Freie Software}
+    \begin{itemize}
+        \item Linux $ \gets $ Windows
+        \item Libre Office/Open Office $ \gets $ Microsoft Office
+        \item Firefox $ \gets $ Internet Explorer
+        \item Thunderbird $ \gets $ Outlook
+        \item Gimp $ \gets $ Photoshop
+        \item Inkscape $ \gets $ Illustrator
+        \item VLC Media Player $ \gets $ Windows Mediaplayer
+    \end{itemize}
+\end{frame}
+
+\end{document}
