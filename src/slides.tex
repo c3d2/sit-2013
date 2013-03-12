@@ -2,14 +2,25 @@
 %\documentclass[14pt,handout]{beamer}
 \usetheme{Darmstadt}
 \usepackage{graphicx}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont[Scale=.8]{Comic Sans MS}
+\setmonofont{Adler}
+\usepackage{luacode}
+
+%\usepackage[ngerman]{babel}
+\usepackage{luatextra}
+\usepackage[EU2]{fontenc}
+
 \usepackage{hyperref}
 \usepackage[german]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+
 \setbeamertemplate{footline}[frame number]
 
 \usepackage{pdfcomment}
-\newcommand{\ben}[1]{\pdfcomment[author=Ben]{#1}}
+\newcommand{\ben}[1]{\pdfcomment[author=c3d2]{#1}}
 \newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
 \usepackage{ifthen}
 \newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
@@ -265,7 +276,5 @@
 
 \section{Zusammenfassung}
 \subsection{}
-
-
 
 \end{document}
