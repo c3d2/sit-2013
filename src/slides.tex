@@ -7,10 +7,12 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \setbeamertemplate{footline}[frame number]
+\usepackage{enumitem}
 
 \usepackage{pdfcomment}
 \newcommand{\ben}[1]{\pdfcomment[author=Ben]{#1}}
 \newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
+\newcommand{\cc200}[1]{\includegraphics[height=4mm]{img/200px-Cc-#1.png}}
 \usepackage{ifthen}
 \newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
 \usepackage{textcomp}
