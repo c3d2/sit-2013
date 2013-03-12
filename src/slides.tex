@@ -7,12 +7,12 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \setbeamertemplate{footline}[frame number]
-\usepackage{enumitem}
+%\usepackage{enumitem}
 
 \usepackage{pdfcomment}
 \newcommand{\ben}[1]{\pdfcomment[author=Ben]{#1}}
 \newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
-\newcommand{\cc200}[1]{\includegraphics[height=4mm]{img/200px-Cc-#1.png}}
+%\newcommand{\cc200}[1]{\includegraphics[height=4mm]{img/200px-Cc-#1.png}}
 \usepackage{ifthen}
 \newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
 \usepackage{textcomp}
@@ -120,11 +120,11 @@
     \begin{itemize}
         \item<2-> Die Software:
             \begin{enumerate}
-            \setcounter{enumi}{0}
-                \item<3-> 0
-                \item<4-> 1
-                \item<5-> 2
-                \item<6-> 3
+            \setcounter{enumi}{-1}
+                \item<3-> darf zu jedem Zweck ausgeführt werden
+                \item<4-> darf untersucht und verändert werden
+                \item<5-> darf verbreitet werden
+                \item<6-> darf verbessert, und die Verbesserung verbreitet werden
             \end{enumerate}
         \item<7-> Auf Software zugeschnitten
     \end{itemize}
@@ -133,38 +133,42 @@
 \begin{frame}
     \frametitle{Creative Commons}
     \begin{itemize}
-        \item<2-> Name der Organisation
-        \item<3-> 2001 gegründet
-        \item<4-> Lawrence Lessig
+        \item<2-> Organisation hat sich zum Ziel gesetzt, Lizenzen zu erarbeiten
+        \item<3-> treibende Kraft: Lawrence Lessig
+        \item<4-> 2001 in den USA gegründet
         \item<5-> Eine Lizenz, die ...
         \begin{itemize}
           \item<6-> eindeutig ist
           \item<7-> leicht verständlich ist
           \item<8-> Nutzung von Werken regelt
         \end{itemize}
-        \item<9-> Besteht aus den Modulen BY, SA, ND, NC
+    \item<9-> Version 4 wird aktuell erarbeitet
+        \item<10-> Besteht aus 4 Modulen: BY, SA, ND, NC
     \end{itemize}
 \end{frame}
 
 %nachfolgende Logos mit einarbeiten
 \begin{frame}
-    \frametitle{Modul 0: BY}
+    \frametitle{Modul 0: BY (By)}
     \begin{itemize}
-        \item 
+        \item impliziert ab CC 3.0
+        \item Namensnennung des Original Urhebers
+        \item Urheberverweis kann auf Wunsch zurückgezogen werden
     \end{itemize}
 \end{frame}
 
 %by kurz erklärt
 \begin{frame}
-    \frametitle{Modul 1: SA}
+    \frametitle{Modul 1: SA (ShareAlike}
     \begin{itemize}
-        \item 
+        \item Weitergabe unter gleichen Bedingungen (s. Kompatibilitätstabelle)
+        \item sichert dass gleiche Lizenz erhalten bleibt
     \end{itemize}
 \end{frame}
 
 %sa kurz erklärt
 \begin{frame}
-    \frametitle{Modul 2: ND}
+    \frametitle{Modul 2: ND (NonDerivative)}
     \begin{itemize}
         \item 
     \end{itemize}
@@ -192,8 +196,18 @@
         \item<2-> durch Kombination 6 Lizenzen zusammenstellbar
             %verweis https://creativecommons.org/choose/?lang=de
         \item<3-> Lizensierung des eigenen Werkes einfach möglich
-        \item<4-> Fallstricke
-            % http://wiki.creativecommons.org/Frequently_Asked_Questions#If_I_derive_or_adapt_a_work_offered_under_a_Creative_Commons_license.2C_which_CC_license.28s.29_can_I_apply_to_the_resulting_work.3F
+        \item<4-> Es muss vermerkt werden:
+            \begin{enumerate}
+                \item<5-> Original Urheber,
+                \item<6-> Lizenz,
+                \item<7-> Link zur Lizenz
+            \end{enumerate}
+        \item<8-> nicht exklusiv
+        \item<9-> Nutzungsbedingungen der Inhalte ist Nutzern klar, da diese die Lizenz erkennen
+        \item<10-> ähm\ldots mal schauen was mir noch einfällt
+        \item<9-> kann nicht zurückgezogen werden
+            % hieraus ergeben sich die Fragen: Was passiert, wenn Werk unter mir nicht genehmen Umständen veröffentlicht wird?
+            % kann ich mein Werk anders lizensieren?
     \end{itemize}
 \end{frame}
 
@@ -271,6 +285,7 @@
 \begin{frame}
     \frametitle{Fazit}
     \begin{itemize}
+        \item blubb
     \end{itemize}
 \end{frame}
 
