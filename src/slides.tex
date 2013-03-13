@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[table]{beamer}
 %\documentclass[14pt,handout]{beamer}
 \usetheme{Darmstadt}
 \usepackage{graphicx}
@@ -12,10 +12,16 @@
 \usepackage{pdfcomment}
 \newcommand{\ben}[1]{\pdfcomment[author=Ben]{#1}}
 \newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
-%\newcommand{\cc200}[1]{\includegraphics[height=4mm]{img/200px-Cc-#1.png}}
 \usepackage{ifthen}
 \newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\newcommand{\Cc}[1]{\begin{center}
+    \includegraphics[height=20mm]{img/200px-Cc-#1.png}
+\end{center}}
 \usepackage{textcomp}
+
+\usepackage{multirow}
+\usepackage{xcolor}
+
 
 \title{Freie Lizenzen bei Lehr- und Lernmaterialien}
 \author{Chaos Computer Club Dresden\\Marius Melzer, Paul Schwanse, Stephan Thamm}
@@ -140,6 +146,7 @@
         \item<2-> Die Software darf \dots
             \begin{enumerate}
             \setcounter{enumi}{-1}
+            %startwert -1, das nächste Item ist also "`0"'
                 \item<3-> zu jedem Zweck ausgeführt werden
                 \item<4-> untersucht und verändert werden
                 \item<5-> verbreitet werden
@@ -155,14 +162,15 @@
         \item<2-> Organisation hat sich zum Ziel gesetzt, Lizenzen zu erarbeiten
         \item<3-> treibende Kraft: Lawrence Lessig
         \item<4-> 2001 in den USA gegründet
-        \item<5-> Eine Lizenz, die ...
-        \begin{itemize}
-          \item<6-> eindeutig ist
-          \item<7-> leicht verständlich ist
-          \item<8-> Nutzung von Werken regelt
-        \end{itemize}
-    \item<9-> Version 4 wird aktuell erarbeitet
-        \item<10-> Besteht aus 4 Modulen: BY, SA, ND, NC
+        \item<5-> 2012: 10-jähriges bestehen CC Europe
+        \item<6-> Eine Lizenz, die ...
+            \begin{itemize}
+                \item<7-> eindeutig ist
+                \item<8-> leicht verständlich ist
+                \item<9-> Nutzung von Werken regelt
+            \end{itemize}
+        \item<10-> Version 4 wird aktuell erarbeitet
+        \item<11-> Besteht aus 4 Modulen: BY, SA, ND, NC
     \end{itemize}
 \end{frame}
 
@@ -170,50 +178,51 @@
 \begin{frame}
     \frametitle{Modul 0: BY (By)}
     \begin{itemize}
-        \item impliziert ab CC 3.0
         \item Namensnennung des Original Urhebers
+        \item impliziert ab CC 3.0
         \item Urheberverweis kann auf Wunsch zurückgezogen werden
     \end{itemize}
+        \Cc{by}
 \end{frame}
 
 %by kurz erklärt
 \begin{frame}
-    \frametitle{Modul 1: SA (ShareAlike}
+    \frametitle{Modul 1: SA (ShareAlike)}
     \begin{itemize}
         \item Weitergabe unter gleichen Bedingungen (s. Kompatibilitätstabelle)
-        \item sichert dass gleiche Lizenz erhalten bleibt
+        \item sichert, dass gleiche Lizenz erhalten bleibt
     \end{itemize}
+    \Cc{sa}
 \end{frame}
 
 %sa kurz erklärt
 \begin{frame}
     \frametitle{Modul 2: ND (NonDerivative)}
     \begin{itemize}
-        \item 
+        \item Keine Bearbeitung
+        \item Werk darf frei kopiert und weitergegeben werden
+        \item Werk darf nicht bearbeitet werden, d. h. Verwendung in einer Collage nicht möglich
     \end{itemize}
+    \Cc{nd}
 \end{frame}
 
 %nd kurz erklärt
 \begin{frame}
-    \frametitle{Modul 3: ND}
+    \frametitle{Modul 3: NC (NonCommercial)}
     \begin{itemize}
-        \item 
+        \item Nur nicht-kommerzielle Nutzung
+        \item Probleme: Was ist kommerzielle Nutzung?
     \end{itemize}
+    \Cc{nc}
 \end{frame}
 
 %nc kurz erklärt und von abgeraten!!!!!
-\begin{frame}
-    \frametitle{Modul 4: NC}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-\end{frame}
 
 \begin{frame}
     \frametitle{Baukastensystem}
     \begin{itemize}
         \item<2-> durch Kombination 6 Lizenzen zusammenstellbar
-            %verweis https://creativecommons.org/choose/?lang=de
+            \url{https://creativecommons.org/choose/?lang=de}
         \item<3-> Lizensierung des eigenen Werkes einfach möglich
         \item<4-> Es muss vermerkt werden:
             \begin{enumerate}
@@ -223,23 +232,40 @@
             \end{enumerate}
         \item<8-> nicht exklusiv
         \item<9-> Nutzungsbedingungen der Inhalte ist Nutzern klar, da diese die Lizenz erkennen
-        \item<10-> ähm\ldots mal schauen was mir noch einfällt
-        \item<9-> kann nicht zurückgezogen werden
+        \item<10-> kann nicht zurückgezogen werden
             % hieraus ergeben sich die Fragen: Was passiert, wenn Werk unter mir nicht genehmen Umständen veröffentlicht wird?
             % kann ich mein Werk anders lizensieren?
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Kompatibilitat}
+    \frametitle{Kompatibilität zwischen Lizenzen}
+    \begin{center}
+        \begin{tabular}{ c l|c|c|c|c|c|c|c }
+            \multicolumn{2}{c|}{}&  \multicolumn{7}{ c }{Lizenzen neues Werk} \\
+            \cline{3-9}
+            \multicolumn{2}{c|}{Org. Lizenz}& by & by-nc & by-nc-nd & by-nc-sa & by-nd & by-sa & pd \\
+            \hline
+            \multirow{7}{*}{} & pd & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
+            & by & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} &  \\
+            & by-nc &  & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} &  &  &  \\
+            & by-nc-nd &  &  &  &  &  &  &  \\
+            & by-nc-sa &  &  &  & \cellcolor{green} &  &  &  \\
+            & by-nd &  &  &  &  &  &  &  \\
+            & by-sa &  &  &  &  &  & \cellcolor{green} &  \\
+        \end{tabular}
+    \end{center}
 \end{frame}
 
 \begin{frame}
     \frametitle{Weitere freie Lizenzen}
     \begin{itemize}
+        \item<1-> test
         \item<2-> Open Database License (ODbL)
         \item<3-> Charityware
         \item<4-> Pizzaware
+        \item<5-> eigene Lizenztexte
+        \item<6-> unhandlich, wer möchte jedes mal die Lizenz lesen müssen?
     \end{itemize}
 \end{frame}
 
@@ -249,14 +275,26 @@
 \begin{frame}
     \frametitle{Open Educational Resources}
     \begin{itemize}
-      \item<2-> Open Courseware:
-      \begin{itemize}
-        \item<3-> timm
-        \item<4-> Berkley
-        \item<5-> MIT
-      \end{itemize}
-      \item<5-> Coursera
-      \item<6-> Edutags
+        \item<1-> Materialien sind wie folgt zugänglich:
+            \begin{itemize}
+                \item<2-> ohne Einschränkung,
+                \item<3-> in einem freien Format,
+                \item<4-> unter einer offenen Lizenzen 
+            \end{itemize}
+        \item<5-> Begriff umfasst alle Arten von (Lehr-)Materialien
+        \item<6-> Idee: Wissensunterschiede zwischen Industrienationen und Entwicklungsländern abbauen
+        \item<7-> 2007: Cape Town Open Education Declaration
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Open Courseware}
+\begin{itemize}
+        \item<1-> timm
+        \item<2-> Berkley
+        \item<3-> MIT
+      \item<4-> Coursera
+      \item<5-> Edutags
     \end{itemize}
 \end{frame}
 
@@ -283,7 +321,8 @@
         \item<6-> 500px
         \item<7-> Jamendo
         \item<8-> ccMixter
-        \item<9-> ...
+        \item<9-> Bundesarchiv
+        \item<10-> \ldots
     \end{itemize}
 \end{frame}
 
@@ -308,6 +347,8 @@
       \item Lizenzen zum einfachen ``Befreien'' von Inhalten
       \item Wissen baut auf Wissen auf
       \item Kollaboration ist wichtig, erfordert aber Abgabe von Rechten
+      \item (Wissens-)Austausch muss sich auch in Lizenzen wiederspiegeln
+      \item Eine Gesellschaft von Prosumenten muss eine Tauschkultur leben, um die Kreativität eines einzelnen nicht zu unterdrücken
     \end{itemize}
 \end{frame}
 
